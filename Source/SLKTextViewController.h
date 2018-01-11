@@ -114,6 +114,9 @@ NS_CLASS_AVAILABLE_IOS(7_0) @interface SLKTextViewController : UIViewController 
 /** YES if the view controller is presented inside of a popover controller. If YES, the keyboard won't move the text input bar and tapping on the tableView/collectionView will not cause the keyboard to be dismissed. This property is compatible only with iPad. */
 @property (nonatomic, assign, getter = isPresentedInPopover) BOOL presentedInPopover;
 
+/** YES if the view controller did appear and everything is finished configurating. This allows blocking some layout animations among other things. */
+@property (nonatomic, getter=isViewVisible) BOOL viewVisible;
+
 /** The current keyboard status (will/did hide, will/did show) */
 @property (nonatomic, readonly) SLKKeyboardStatus keyboardStatus;
 
@@ -121,7 +124,6 @@ NS_CLASS_AVAILABLE_IOS(7_0) @interface SLKTextViewController : UIViewController 
 @property (nonatomic, readonly) SLKTextView *textView;
 @property (nonatomic, readonly) UIButton *leftButton;
 @property (nonatomic, readonly) UIButton *rightButton;
-
 
 #pragma mark - Initialization
 ///------------------------------------------------
