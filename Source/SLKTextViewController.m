@@ -46,9 +46,6 @@ CGFloat const SLKAutoCompletionViewDefaultHeight = 140.0;
 // YES if the user is moving the keyboard with a gesture
 @property (nonatomic, assign, getter = isMovingKeyboard) BOOL movingKeyboard;
 
-// YES if the view controller did appear and everything is finished configurating. This allows blocking some layout animations among other things.
-@property (nonatomic, getter=isViewVisible) BOOL viewVisible;
-
 // YES if the view controller's view's size is changing by its parent (i.e. when its window rotates or is resized)
 @property (nonatomic, getter = isTransitioning) BOOL transitioning;
 
